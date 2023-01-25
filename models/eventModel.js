@@ -85,6 +85,10 @@ const eventSchema = mongoose.Schema({
             type: String,
             default:""
         },
+        fourth:{
+            type: String,
+            default:""
+        }
     },
 
     coordinators:[ {

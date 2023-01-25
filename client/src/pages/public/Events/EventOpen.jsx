@@ -117,9 +117,14 @@ export default function EventOpen(props) {
             )}
             {eventdata.prices.third != "" && (
               <p className={styles["prize"]}>
-                third : {eventdata.prices.third}
+                Third : {eventdata.prices.third}
               </p>
             )}
+            {eventdata.prices.third?(
+              <p className={styles["prize"]}>
+                Fourth : {eventdata.prices.fourth}
+              </p>
+            ):""}
           </div>
         </div>
       </LayoutPage>
