@@ -1,0 +1,41 @@
+.page {
+    /* background-color: lightseagreen;
+    color: black;
+    font-size: 50px; */
+}
+/* .grid-container{
+    display: grid;
+    grid-template-areas:'itemleft itemleft itemright itemright itemright itemright itemright' ;
+} */
+.eventbutton{
+    display: flex;
+    justify-content: center;
+}
+.form{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    z-index: 1222;
+    background-color: aquamarine;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
+    margin-bottom: 40px;
+}
+.boldname{
+    font-weight: 700;
+    font-size:medium;
+}
+.header{
+    display: flex;
+    justify-content: center;
+}
+.formcontainer{
+    display: grid;
+    grid-template-columns:auto auto auto auto ;
+    column-gap: 40px;
+    row-gap: 30px;
+}
+.textfield{
+width: 100%;
+}

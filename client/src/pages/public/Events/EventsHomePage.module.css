@@ -1,0 +1,56 @@
+:root {
+  --main-color: #f8c456;
+}
+
+.events-page-heading {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  color: var(--main-color);
+  text-align: left;
+  font-size: 5rem;
+  padding: 2.5rem;
+  margin-left: 3rem;
+  letter-spacing: 5px;
+  z-index: 50;
+  margin-top: 50px;
+}
+
+@media (max-width: 600px) {
+  .events-page-heading {
+    font-size: 3rem;
+    padding: 2rem;
+    margin-left: 1.5rem;
+  }
+}
+
+.fixed-logo {
+  display: none;
+  position: fixed;
+  top: 2%;
+  right: 0%;
+  height: 170px;
+  aspect-ratio: 1 / 1;
+  z-index: 1000;
+}
+@media (max-width: 600px) {
+  .fixed-logo {
+    height: 150px;
+  }
+}
+.fixed-logo-visible {
+  display: unset;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  padding: 5rem;
+  padding-top: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+}

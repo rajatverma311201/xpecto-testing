@@ -1,0 +1,12 @@
+.layout{
+  min-height: 100vh;
+  background-size: contain;
+  width: calc(100vw - 50px);
+  padding-left: 50px;
+}
+@media screen and (max-width: 450px) {
+  .layout {
+    padding-left: 0;
+    width: 100vw;
+  }
+}

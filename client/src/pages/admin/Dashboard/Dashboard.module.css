@@ -1,0 +1,11 @@
+.page {
+    background-color: lightseagreen;
+    color: black;
+    font-size: 50px;
+}
+
+.dcontainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

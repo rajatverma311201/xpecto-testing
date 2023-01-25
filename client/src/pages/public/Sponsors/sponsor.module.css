@@ -1,0 +1,109 @@
+.fixed-logo {
+    display: none;
+    position: fixed;
+    top: 2%;
+    right: 0%;
+    height: 170px;
+    aspect-ratio: 1 / 1;
+    z-index: 1000;
+  }
+  .fixed-logo-visible {
+    display: unset;
+  }
+  @media (max-width: 600px) {
+    .fixed-logo {
+      height: 150px;
+    }
+  }
+.container{
+    margin-left: 0px;
+    margin-right: 0px;
+    color:#FAEA09;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left:20px ;
+    padding-right: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* background-color: black; */
+}
+.container2{
+    margin-top: 10px;
+    margin-right: 50px;
+    margin-left: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+.heading1{
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    text-shadow: 1px 1.5px 3px #FAEA09;
+    margin-top: 75px;
+    padding-top: 25px;
+
+}
+.heading2{
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 700;
+    text-shadow: 1px 1.8px 3px#FAEA09;
+}
+.sponsordiv{
+    background-color: #191516;
+    border: 1px solid#FAEA09;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 2px solid #F5156E;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-bottom: 20px;
+    padding-top: 20px!important;
+    padding-bottom: 20px!important;
+}
+.sponsordiv a{
+    text-decoration: none;
+}
+.sponsordiv img{
+    width:45%;
+    height: 25%;
+    
+}
+.eventpartners{
+    color: #FAEA09;
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+.sponsordiv:hover{
+    transform: translateY(-5px);
+	transition: 0.25s;
+    box-shadow: 0.5px 1px 10px 1px #ffffff;
+    scale: 1.03;
+}
+.hidden{
+    opacity: 0;
+    filter: blur(5px);
+    /* transform: translateX(-100%); */
+    transition: all 1s;
+}
+.show{
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+}
+
+@media screen and (max-width:767px) {
+    
+    .heading1{
+        font-size: 2rem;
+    margin-top: 50px;
+    }
+}
