@@ -2,10 +2,13 @@
     display: none;
     position: fixed;
     top: 2%;
-    right: 0%;
     height: 170px;
     aspect-ratio: 1 / 1;
     z-index: 1000;
+    right: 25px;
+    font-family: 'Android 101' !important;
+    top: 10px;
+
   }
   .fixed-logo-visible {
     display: unset;
@@ -45,6 +48,8 @@
     text-shadow: 1px 1.5px 3px #FAEA09;
     margin-top: 75px;
     padding-top: 25px;
+    font-family: 'Android 101';
+    line-height: 50px;
 
 }
 .heading2{
@@ -54,8 +59,9 @@
     text-shadow: 1px 1.8px 3px#FAEA09;
 }
 .sponsordiv{
-    background-color: #191516;
-    border: 1px solid#FAEA09;
+    background-color: transparent;
+    backdrop-filter: blur(25px);
+    border: 1px solid white;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -85,7 +91,7 @@
 .sponsordiv:hover{
     transform: translateY(-5px);
 	transition: 0.25s;
-    box-shadow: 0.5px 1px 10px 1px #ffffff;
+    /* box-shadow: 0.5px 1px 10px 1px #ffffff; */
     scale: 1.03;
 }
 .hidden{

@@ -74,7 +74,7 @@
 .sidebarBtn {
   --sidebar-button-width: 80;
   --sidebar-button-translate: calc((1 + 100 / var(--sidebar-button-width)));
-  font-weight: bolder;
+  /* font-weight: bolder; */
   font-size: x-large;
   border: none;
   height: 4rem;
@@ -86,6 +86,8 @@
   );
   /* corner slant cut */
   background: linear-gradient(-45deg, transparent 15px, #ccf1e0 15px);
+  font-family: 'Android 101';
+  font-weight: normal;
 }
 
 .sidebarBtn:hover{

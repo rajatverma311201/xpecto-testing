@@ -11,9 +11,10 @@
   font-size: 5rem;
   padding: 2.5rem;
   margin-left: 3rem;
-  letter-spacing: 5px;
+  letter-spacing: 2.5px;
   z-index: 50;
   margin-top: 50px;
+  font-family: 'Android 101';
 }
 
 @media (max-width: 600px) {
@@ -27,11 +28,14 @@
 .fixed-logo {
   display: none;
   position: fixed;
-  top: 2%;
-  right: 0%;
+  top: 10px;
   height: 170px;
   aspect-ratio: 1 / 1;
   z-index: 1000;
+  right: 25px;
+  top: 10px;
+
+  font-family: 'Android 101' !important;
 }
 @media (max-width: 600px) {
   .fixed-logo {
@@ -54,4 +58,11 @@ main {
   flex-wrap: wrap;
   gap: 50px;
   align-items: center;
+}
+
+
+.loading{
+  font-size: 2.5rem;
+  color: #f8c456;
+  font-weight: bold;
 }

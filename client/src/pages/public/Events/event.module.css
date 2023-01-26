@@ -2,10 +2,13 @@
   display: none;
   position: fixed;
   top: 2%;
-  right: 0%;
   height: 170px;
   aspect-ratio: 1 / 1;
   z-index: 1000;
+  right: 25px;
+  top: 10px;
+
+  font-family: 'Android 101' !important;
 }
 @media (max-width: 600px) {
   .fixed-logo {
@@ -32,6 +35,7 @@
   text-shadow: 1px 1.8px 3px #faea09;
   color: #faea09;
   margin-bottom: 20px;
+  font-family: 'Android 101';
 }
 .event-card {
   display: flex;

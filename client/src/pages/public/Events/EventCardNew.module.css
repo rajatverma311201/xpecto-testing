@@ -15,6 +15,7 @@
   margin: 0;
 }
 .card-inner-container {
+  position: relative;
   margin: 0;
 
   background-color: #0d0e10;
@@ -45,24 +46,26 @@
 }
 .more-button {
   position: absolute;
-  right: 5px;
-  bottom: -2.75rem;
+  right: 10px;
+  bottom: 0rem;
   clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
   padding: 5px 20px 1px 20px;
   background-color: #f8c456;
   color: #0d0e10;
-  font-size: 15px;
+  font-size: 12.5px;
   text-decoration: none;
 }
 @media (max-width: 600px) {
   .event-name {
-    font-size: 2rem;
+    font-size: 1.75rem;
   }
   .event-tagline {
-    font-size: 0.75rem;
+    font-size: 0.7rem;
   }
 
   .more-button {
-    font-size: 12px;
+    font-size: 10px;
   }
 }
+
+

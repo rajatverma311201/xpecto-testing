@@ -113,11 +113,14 @@ body {
 .fixed-logo {
   display: none;
   position: fixed;
-  top: 2%;
-  right: 0%;
+  top: 7.5px;
   height: 170px;
   aspect-ratio: 1 / 1;
   z-index: 1000;
+  right: 25px;
+  top: 10px;
+
+  font-family: 'Android 101' !important;
 }@media (max-width: 600px) {
   .fixed-logo {
     height: 150px;

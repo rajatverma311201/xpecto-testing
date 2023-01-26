@@ -1,11 +1,12 @@
 .heading1 {
   text-align: start;
   font-size: 4rem;
-  font-weight: 700;
+  font-weight: 500;
   /* margin-bottom: 10px; */
   /* text-shadow: 1px 1.1px 2.5px #fff; */
   color: #1af527;
   margin-bottom: 0px;
+  font-family: 'Android 101';
 }
 .aboutcontainer {
   text-align: start;
@@ -52,6 +53,8 @@
   -o-transition: all 0.25s;
   font-size: 1.5rem;
   text-decoration: none;
+  font-family: 'Android 101';
+  /* letter-spacing: -1px; */
 }
 .just:hover {
   background-color: #000;

@@ -19,7 +19,6 @@ import LinkedIn from "@mui/icons-material/LinkedIn";
 import Instagram from "@mui/icons-material/Instagram";
 import Twitter from "@mui/icons-material/Twitter";
 import { GoogleLogin } from "@react-oauth/google";
-import BasicModal from "./BasicModal";
 import Modal from "@mui/material/Modal";import LayoutPage from "../component/Layout/Layout";
 
 export default function Home() {

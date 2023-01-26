@@ -184,7 +184,7 @@ export const oldsponsors=[{
   },
   "sponsor_name": "Befikra Community",
   "spon_description": "A",
-  "spon_imagelink": "https://befikracommunity.in/images/logo.jpeg",
+  "spon_imagelink": "https://www.befikracommunity.in/wp-content/uploads/2022/11/Dark-Mode-Full-Logo.png",
   "spon_sitelink": "https://befikracommunity.in/",
   "spon_type": "Partners",
   "spon_additionalinfo": "Community Partner"
