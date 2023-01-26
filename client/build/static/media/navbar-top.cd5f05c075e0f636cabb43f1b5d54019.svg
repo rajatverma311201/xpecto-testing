@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140.45 158.18">
+    <defs>
+        <!-- <style>.cls-1{fill:#faea09;}</style> -->
+        <style>.cls-1{fill:var(--current-page-color);}</style>
+    </defs>
+    <g id="Layer_2" data-name="Layer 2">
+        <g id="Layer_6" data-name="Layer 6">
+            <polygon xmlns="http://www.w3.org/2000/svg" class="cls-1"
+                points="0 158.18 0 0 140.46 0 140.46 142.62 125.45 158.18" />
+        </g>
+    </g>
+</svg>
