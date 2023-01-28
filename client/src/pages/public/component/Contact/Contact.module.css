@@ -1,0 +1,100 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
+
+:root {
+  --main-contact-color: #00ddcc;
+}
+.contact-container {
+  box-sizing: border-box;
+  padding-bottom: 200px;
+}
+.card-inner {
+  box-sizing: border-box;
+  padding: 20px;
+  height: 300px;
+  font-family: "Montserrat";
+  /*background-color: var(--main-contact-color);
+  */width: 450px;
+  border: 2px solid var(--main-contact-color);
+  /*border: 2px solid #fff;
+  */border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+.contact-heading {
+  font-size: 4rem;
+  font-weight: 500;
+  color: var(--main-contact-color);
+  /* text-align: start; */
+  font-family: "Android 101";
+}
+.cards-container {
+    display: flex;
+  gap: 100px;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.card {
+  backdrop-filter: blur(50px)!important;
+}
+
+.card-heading {
+  position: relative;
+  font-family: "Android 101";
+  /* font-weight: ; */
+  font-size: 1.65rem;
+  color: var(--main-contact-color);
+  color: #fff;
+}
+
+.thick-line {
+  /* lef:;
+  */
+  margin-left: auto;
+  margin-right: auto;
+  /*position: absolute;
+  */
+  background-color: var(--main-contact-color);
+  width: 100px;
+  height: 2.5px;
+  margin-top: 15px;
+  /*border: 2px solid var(--main-contact-color);
+  */
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+.email {
+    margin: 10px;
+    margin-bottom: 15px;
+}
+.email-text,
+.phone-text {
+  font-size: 18px;
+  color: #fff;
+  margin: 5px;
+}
+
+@media screen and (max-width: 600px) {
+  .contact-heading {
+    font-size: 2.49rem;
+  }
+  .email-text,
+.phone-text {
+  font-size: 16px;
+  margin: 5px;
+}
+.card-inner{
+    width: 301px;
+    height: auto;
+}
+.card-heading{
+    font-size: 1.5rem;
+}
+}

@@ -86,11 +86,11 @@
   );
   /* corner slant cut */
   background: linear-gradient(-45deg, transparent 15px, #ccf1e0 15px);
-  font-family: 'Android 101';
+  font-family: "Android 101";
   font-weight: normal;
 }
 
-.sidebarBtn:hover{
+.sidebarBtn:hover {
   transform: translateX(5px) !important;
   -webkit-transform: translateX(5px) !important;
   -moz-transform: translateX(5px) !important;

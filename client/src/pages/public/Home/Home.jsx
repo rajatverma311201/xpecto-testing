@@ -19,8 +19,10 @@ import LinkedIn from "@mui/icons-material/LinkedIn";
 import Instagram from "@mui/icons-material/Instagram";
 import Twitter from "@mui/icons-material/Twitter";
 import { GoogleLogin } from "@react-oauth/google";
-import Modal from "@mui/material/Modal";import LayoutPage from "../component/Layout/Layout";
-
+import Modal from "@mui/material/Modal";
+import LayoutPage from "../component/Layout/Layout";
+import Contact from "../component/Contact/Contact";
+import { motion } from "framer-motion";
 export default function Home() {
   const user = useSelector((state) => state.userinfo);
   const dispatch = useDispatch();
@@ -31,46 +33,7 @@ export default function Home() {
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
-  // const getUser = async (props) => {
-  //   try {
-  //     const url = `${process.env.REACT_APP_BACKENDURL}/auth/login`;
-  //     const { data } = await axios.get(url, { withCredentials: true });
-  //     setnewuser((newuser) => ({
-  //       ...newuser,
-  //       email: data.data.email,
-  //       displayname: data.data.displayName,
-  //       image: data.data.image,
-  //       firstname: data.data.firstName,
-  //     }));
-  //     const d = (newuser) => {
-  //       dispatch(action.changeuserinfo(newuser));
-  //     };
-  //     d(newuser);
-  //     setisuser(true);
-  //     if (data.isnewuser) {
-  //       setbool(true);
-  //     }
-  //   } catch (err) {
-  //     console.log(err);
-  //   }
-  // };
-  //  if(data.isnewuser){
-  // 	navigate("/signup");
-  //  }
-  // useEffect(() => {
-  //   getUser();
-  //   const nav = () => {
-  //     if (bool) {
-  //       navigate("/signup");
-  //     }
-  //   };
-  //   nav();
-  // }, [isuser, user]);
-
-  // const usera = userDetails.user;
-  // const logout = () => {
-  //   window.open(`${process.env.REACT_APP_BACKENDURL}/auth/logout`, "_self");
-  // };
+  
   const loginSuccessHandler = async (cred) => {
     try {
       const resp = await axios.post(
@@ -79,7 +42,6 @@ export default function Home() {
           credential: cred,
         }
       );
-      // console.log(resp);
       localStorage.setItem("UserJwtToken", resp.data.jwtToken);
       if (resp.data.isNewUser) {
         navigate("/signup");
@@ -138,7 +100,6 @@ export default function Home() {
     };
   }, []);
 
-  // color change on scroll
   const mainLogoRef = useRef(null);
   useEffect(() => {
     const current = mainLogoRef.current;
@@ -168,13 +129,20 @@ export default function Home() {
   return (
     <>
       <LayoutPage>
-        <div
+        <motion.div
+          initial={{ y: -100 }}
+          whileInView={{ y: 0 }}
+          transition={{
+            type: "spring",
+            bounce: 0.4,
+            duration: 1,
+          }}
           className={`${styles["fixed-logo"]} ${
             fixedLogoVisible && styles["fixed-logo-visible"]
           }`}
         >
           <FixedLogo />
-        </div>
+        </motion.div>
         <HashLink
           smooth
           to="/#"
@@ -182,7 +150,8 @@ export default function Home() {
             fixedLogoVisible && styles["back-to-top-visible"]
           }`}
         >
-          <BackToTop />
+          
+            <BackToTop />
         </HashLink>
         <Sidebar />
         <div
@@ -190,13 +159,31 @@ export default function Home() {
           data-color="#faea09"
           className={styles["section1"]}
           id="#"
+
+          // initial={{opacity:0}}
+          // whileInView={{opacity:1 }}
+          // transition={{
+          //   // type: "spring",
+          //   // bounce: 0.4,
+          //   duration: 1,
+          // }}
         >
           <img
             className={styles["section1-plus"]}
             src={`${process.env.PUBLIC_URL}/home/plusplus.svg`}
             alt="plusplusgraphic"
           />
-          <div className={styles["mainlogo"]}>
+          <motion.div
+            initial={{ opacity: 0, scale: 0.5, }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{
+              type: "spring",
+              bounce: 0.4,
+              duration: 1,
+              delay:1,
+            }}
+            className={styles["mainlogo"]}
+          >
             <img
               src={`${process.env.PUBLIC_URL}/home/mainlogo.svg`}
               alt="XpectoLogo"
@@ -226,19 +213,33 @@ export default function Home() {
               </a>
             </div>
             {/* temporary solution end */}
-          </div>
+          </motion.div>
 
-          <img
+          <motion.img
             className={styles["section1-rightrectangle"]}
             src={`${process.env.PUBLIC_URL}/home/rightrectangle.svg`}
             alt="rightrectangle"
+            initial={{ y: "-100%" }}
+            whileInView={{ y: 0 }}
+            transition={{
+              type: "spring",
+              bounce: 0.4,
+              duration: 1.5,
+            }}
           />
           <HashLink
             smooth
             to="/#about"
             className={styles["section1-scrolldown"]}
           >
-            <img
+            <motion.img
+              initial={{ y: "150%" }}
+              whileInView={{ y: 0 }}
+              transition={{
+                type: "spring",
+                bounce: 0.4,
+                duration: 1.5,
+              }}
               src={`${process.env.PUBLIC_URL}/home/scrolldown.svg`}
               alt="scrolldown"
             />
@@ -249,26 +250,32 @@ export default function Home() {
             alt="bottomleftgraphic"
           />
           {!loadingUser && !isAuthenticated ? (
-
-          <img
-            className={styles["section1-register"]}
-            src={`${process.env.PUBLIC_URL}/home/register.svg`}
-            alt="register"
-            onClick={handleOpen}
-          />
+            <img
+              className={styles["section1-register"]}
+              src={`${process.env.PUBLIC_URL}/home/register.svg`}
+              alt="register"
+              onClick={handleOpen}
+            />
           ) : (
             ""
           )}
-          {/* <Button variant="outlined" onClick={googleAuth} sx={{ m: 5 }}>
-      <img
-            className={styles["section1-register"]}
-            src={`${process.env.PUBLIC_URL}/home/register.svg`}
-            alt="register"
-          />
-      </Button> */}
+        
         </div>
-        <div className={styles["section1"]} id="about">
+        <motion.div
+          initial={{ y: 150 }}
+          whileInView={{ y: 0 }}
+          transition={{
+            // type: "spring",
+            // bounce: 0.4,
+            duration: 1,
+          }}
+          className={styles["section1"]}
+          id="about"
+        >
           <About />
+        </motion.div>
+        <div className={styles["section2"]} id="contact">
+          <Contact />
         </div>
       </LayoutPage>
 
