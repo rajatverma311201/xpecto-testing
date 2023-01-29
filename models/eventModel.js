@@ -128,7 +128,7 @@ const eventSchema = mongoose.Schema({
         default: false,
     },
     registeredUsers: [
-        { type: mongoose.Schema.ObjectId, ref: "User", unique: true },
+        { type: mongoose.Schema.ObjectId, ref: "UserDetails", unique: true },
     ],
     registeredTeams: [
         { type: mongoose.Schema.ObjectId, ref: "EventTeam", unique: true },

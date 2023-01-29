@@ -18,6 +18,7 @@ const EventsHomePage = () => {
                 ...events,
                 data: data.data.data,
             }));
+            // console.log(data.data.data)
             setIsLoading((prev) => false);
         } catch (err) {
             setIsLoading((prev) => true);
@@ -48,14 +49,20 @@ const EventsHomePage = () => {
                     <main className={styles["main"]}>
                         {events.data.map((element) => {
                             return element.isLive ? (
-                                <EventCardNew data={element} />
+                                <EventCardNew
+                                    data={element}
+                                    key={element.name}
+                                />
                             ) : (
                                 ""
                             );
                         })}
                         {events.data.map((element) => {
                             return !element.isLive ? (
-                                <EventCardNew data={element} />
+                                <EventCardNew
+                                    data={element}
+                                    key={element.name}
+                                />
                             ) : (
                                 ""
                             );

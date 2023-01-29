@@ -22,4 +22,4 @@ eventTeamSchema.pre(/^find/, function (next) {
 
 const EventTeam = mongoose.model("EventTeam", eventTeamSchema);
 
-module.exports = Event;
+module.exports = EventTeam;
