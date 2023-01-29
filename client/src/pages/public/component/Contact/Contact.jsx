@@ -72,9 +72,9 @@ const Contact = () => {
             </div>
             <div className={styles["card-content"]}>
               <div className={styles["email"]}>
-                <div className={styles["icon"]}>
+                <a href="mailto:convenor@xpecto.tech" target="_blank" className={styles["icon"]}>
                   <Email sx={{ color: "white", fontSize: "35px" }} />
-                </div>
+                </a >
                 <div className={styles["email-text"]}>convenor@xpecto.tech</div>
               </div>
 
@@ -102,9 +102,9 @@ const Contact = () => {
 
             <div className={styles["card-content"]}>
               <div className={styles["email"]}>
-                <div className={styles["icon"]}>
+                <a href="mailto:team@xpecto.tech" target="_blank" className={styles["icon"]}>
                   <Email sx={{ color: "white", fontSize: "35px" }} />
-                </div>
+                </a>
                 <div className={styles["email-text"]}>team@xpecto.tech</div>
               </div>
               <div className={styles["phone"]}>

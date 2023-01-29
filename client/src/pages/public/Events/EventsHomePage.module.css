@@ -62,7 +62,12 @@ main {
 
 
 .loading{
-  font-size: 2.5rem;
-  color: #f8c456;
-  font-weight: bold;
+  /* font-size: 2.5rem; */
+  /* color: #f8c456; */
+  /* font-weight: bold; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top:100px ;
+
 }

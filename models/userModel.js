@@ -51,9 +51,29 @@ const UserSchema = new mongoose.Schema({
     referralCode: {
         type: String,
     },
+    registeredEvents: [
+        { type: mongoose.Schema.ObjectId, ref: "Event", unique: true },
+    ],
+    registeredTeams: [
+        { type: mongoose.Schema.ObjectId, ref: "EventTeam", unique: true },
+    ],
+    headOfTeams: [
+        { type: mongoose.Schema.ObjectId, ref: "EventTeam", unique: true },
+    ],
 });
 
- 
-const User =mongoose.model("UserDetails", UserSchema);
+UserSchema.pre(/^find/, function (next) {
+    this.populate({
+        path: "registeredEvents",
+        select: "-__v",
+    });
+    this.populate({
+        path: "registeredTeams",
+        select: "-__v",
+    });
+    next();
+});
+
+const User = mongoose.model("UserDetails", UserSchema);
 
 module.exports = User;

@@ -2,6 +2,7 @@ const mongoose = require("mongoose");
 
 const teamSchema = mongoose.Schema({
   // write your schema here
+  
   image: {
     type: String,
   },
@@ -22,6 +23,9 @@ const teamSchema = mongoose.Schema({
   linkedinLink: {
     type: String,
   },
+  team:{
+    type:String
+  }
 });
 
 const TeamMember = mongoose.model("TeamMember", teamSchema);

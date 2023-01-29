@@ -1,0 +1,124 @@
+:root {
+    --main-team-color: #00ddcc !important;
+}
+
+.container * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.header {
+    display: flex;
+    flex-direction: column;
+}
+
+.main-heading {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    color: var(--main-team-color);
+    text-align: left;
+    font-size: 4rem;
+    padding: 2.5rem;
+    margin-left: 3rem;
+    letter-spacing: 2.5px;
+    z-index: 50;
+    margin-top: 50px;
+    font-family: "Android 101";
+}
+
+@media (max-width: 600px) {
+    .main-heading {
+        font-size: 3rem;
+        padding: 2rem;
+        margin-left: 1.5rem;
+    }
+}
+
+.fixed-logo {
+    display: none;
+    position: fixed;
+    top: 10px;
+    height: 170px;
+    aspect-ratio: 1 / 1;
+    z-index: 1000;
+    right: 25px;
+    top: 10px;
+
+    font-family: "Android 101" !important;
+}
+
+.fixed-logo-visible {
+    display: unset;
+}
+.loading {
+    /* font-size: 2.5rem;
+    color: var(--main-team-color);
+    font-weight: bold; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px auto;
+}
+
+
+
+.team-heading {
+    font-size: 2rem;
+    font-weight: lighter;
+    color: white;
+    font-family: "Android 101";
+    margin-top: 50px;
+    text-align: center;
+    /* text-align: left; */
+}
+
+.team-cards-container {
+    padding: 50px 5px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+    gap: 50px;
+}
+
+.line {
+    width: 200px;
+    height: 5px;
+    border-radius: 1000px;
+    -webkit-border-radius: 1000px;
+    -moz-border-radius: 1000px;
+    -ms-border-radius: 1000px;
+    -o-border-radius: 1000px;
+    background-color: var(--main-team-color);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.back-to-top {
+    display: none;
+    position: fixed;
+    bottom: 3%;
+    right: 3%;
+    height: max(7vh, 3vw);
+    aspect-ratio: 1 / 1;
+    z-index: 10;
+    cursor: pointer;
+}
+.back-to-top-visible {
+    display: unset;
+}
+@media (max-width: 600px) {
+    .team-heading {
+        font-size: 1.75rem;
+    }
+    .fixed-logo {
+        height: 150px;
+    }
+    .main-heading {
+        font-size: 3rem;
+    }
+    .line {
+        width: 150px;
+    }
+}

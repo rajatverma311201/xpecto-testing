@@ -1,17 +1,13 @@
-import React, { useEffect } from "react";
+import React from "react";
 import styles from "./sponsor.module.css";
 import { oldsponsors } from "./oldsponsorsinfos";
 import Grid from "@mui/system/Unstable_Grid/Grid";
 import { useState } from "react";
-import About from "../component/About/About";
-// import Sidebar from "../../../../components/Sidebar/Sidebar";
 import Sidebar from "../../../components/Sidebar/Sidebar";
 import { ReactComponent as FixedLogo } from "../../../svg/xpecto-logo.svg";
 
 export default function Sponsor() {
-  // useEffect(() => {
-  //   window.location.reload(false);
-  // }, []);
+
   const [oldsponsorsdata, setoldsponsordata] = useState(oldsponsors);
   const [spontype, setspontype] = useState([
     { name: "Associate Sponsors" },
@@ -30,15 +26,11 @@ export default function Sponsor() {
       </div>
       <div
         data-color="#f8e856"
-        // ref={eventsRef}
-        // className={styless["events-page-container"]}
         style={{
           backgroundImage: `url(${process.env.PUBLIC_URL}/home/background.jpg)`,
           backgroundRepeat: "no-repeat",
           backgroundSize: "cover",
-          //   backgroundPosition: "center",
           backgroundAttachment: "fixed",
-          //   height: "100vh",
         }}
       >
         <div className={styles["container"]}>

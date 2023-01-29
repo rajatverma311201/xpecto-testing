@@ -2,7 +2,20 @@ const Event = require("./../models/eventModel");
 
 exports.getEvents=async(req,res)=>{
  try {
-    const allevents= await Event.find();
+    let allevents= await Event.find();
+
+    allevents.sort((a, b) => {
+        if (a.name < b.name) {
+            return -1;
+        }
+        if (a.name > b.name) {
+            return 1;
+        }
+        return 0;
+    });
+
+
+
     context={
         status:"success",
         data:allevents

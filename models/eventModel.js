@@ -1,58 +1,67 @@
 const mongoose = require("mongoose");
-
+const EventTeam = require("./eventTeamModel");
+const User = require("./userModel");
 const eventSchema = mongoose.Schema({
     club: {
         type: String,
-        default:""
+        default: "",
+        trim: true,
     },
     info: {
         type: String,
-        default:""
+        default: "",
+        trim: true,
     },
     name: {
         type: String,
         unique: true,
-        default:""
+        default: "",
+        trim: true,
     },
 
     shortsummary: {
         type: String,
-        default:""
+        default: "",
+        trim: true,
     },
 
     longsummary: {
         type: String,
-        default:""
+        default: "",
+        trim: true,
     },
 
     event_image: {
         type: String,
-        default:""
+        default: "",
+        trim: true,
     },
     rulebook_link: {
         type: String,
-        default:""
-
+        default: "",
+        trim: true,
     },
 
     description: {
         type: String,
-        default:""
+        default: "",
+        trim: true,
     },
 
     problemset_link: {
         type: String,
-        default:""
-
+        default: "",
+        trim: true,
     },
     submission_link: {
         type: String,
-        default:""
+        default: "",
+        trim: true,
     },
 
     createdAt: {
         type: String,
-       },
+    },
 
     start_time: {
         day: {
@@ -74,56 +83,69 @@ const eventSchema = mongoose.Schema({
 
     prices: {
         first: {
-            type: String,
-            default:""
+            type: Number,
+            default: 0,
         },
         second: {
-            type: String,
-            default:""
+            type: Number,
+            default: 0,
         },
         third: {
-            type: String,
-            default:""
+            type: Number,
+            default: 0,
         },
-        fourth:{
-            type: String,
-            default:""
-        }
+        fourth: {
+            type: Number,
+            default: 0,
+        },
     },
 
-    coordinators:[ {
+    coordinators: [
+        {
             name: {
                 type: String,
-                default:""
+                default: "",
             },
             contact: {
                 type: String,
-                default:""
+                default: "",
             },
-        
-    }
+        },
     ],
 
-    // registeredUsers: [
-    //     {
-    //         user_id: {
-    //             type: String,
-    // unique:true
-    //         },
-    //     },
-    // ],
     teamMaxSize: {
         type: String,
         required: true,
-        default:""
+        default: "",
     },
     teamMinSize: {
         type: String,
         required: true,
-        default:""
+        default: "",
     },
+    isLive: {
+        type: Boolean,
+        default: false,
+    },
+    registeredUsers: [
+        { type: mongoose.Schema.ObjectId, ref: "User", unique: true },
+    ],
+    registeredTeams: [
+        { type: mongoose.Schema.ObjectId, ref: "EventTeam", unique: true },
+    ],
 });
-;
+
+eventSchema.pre(/^find/, function (next) {
+    this.populate({
+        path: "registeredUsers",
+        select: "-__v",
+    });
+    this.populate({
+        path: "registeredTeams",
+        select: "-__v",
+    });
+    next();
+});
 
 const Event = mongoose.model("Event", eventSchema);
 

@@ -1,136 +1,138 @@
 :root {
-  --main-color: #f8c456;
+    --main-color: #f8c456;
 }
 
 .events-page-heading {
-  margin: 75px;
-  padding: 0;
-  color: var(--main-color);
-  text-align: left;
-  font-size: 3rem;
-  /* padding: 2.5rem; */
-  /* margin-left: 3rem; */
-  letter-spacing: 5px;
+    margin: 75px;
+    padding: 0;
+    color: var(--main-color);
+    text-align: left;
+    font-size: 3rem;
+    /* padding: 2.5rem; */
+    /* margin-left: 3rem; */
+    /* letter-spacing: 5px; */
+    font-weight: normal;
+    font-family: "Android 101";
 }
 .events-page-teamsize {
-  color: var(--main-color);
-  margin: 0;
+    color: var(--main-color);
+    margin: 0;
 }
 
 @media (max-width: 600px) {
-  .events-page-heading {
-    font-size: 2rem;
-    padding: 2rem;
-    margin-left: 1.5rem;
-  }
+    .events-page-heading {
+        font-size: 2rem;
+        padding: 2rem;
+        margin-left: 1.5rem;
+    }
 }
 .fixed-logo {
-  display: none;
-  position: fixed;
-  top: 2%;
-  height: 170px;
-  aspect-ratio: 1 / 1;
-  z-index: 1000;
-  right: 25px;
-  top: 10px;
+    display: none;
+    position: fixed;
+    top: 2%;
+    height: 170px;
+    aspect-ratio: 1 / 1;
+    z-index: 1000;
+    right: 25px;
+    top: 10px;
 
-  font-family: 'Android 101' !important;
+    font-family: "Android 101" !important;
 }
 @media (max-width: 600px) {
-  .fixed-logo {
-    height: 150px;
-  }
+    .fixed-logo {
+        height: 150px;
+    }
 }
 .fixed-logo-visible {
-  display: unset;
+    display: unset;
 }
 
 .header {
-  display: flex;
-  flex-direction: column;
+    display: flex;
+    flex-direction: column;
 }
 .main {
-  color: white;
-  padding: 5rem;
-  padding-top: 0rem;
-  gap: 25px;
+    color: white;
+    padding: 5rem;
+    padding-top: 0rem;
+    gap: 25px;
 }
 .event-btns {
-  display: block;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  display: flex;
-  gap: 25px;
-  /* background-color: var(--main-color); */
-  /* color: black; */
+    display: block;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    display: flex;
+    gap: 25px;
+    /* background-color: var(--main-color); */
+    /* color: black; */
 }
 .eventbutton {
-  background: transparent;
-  border: 2px solid var(--main-color);
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  cursor: pointer;
-  border-radius: 12px;
-  text-decoration: none;
-  font-weight: bolder;
-  transition: 0.2s ease-in-out;
-  background-color: var(--main-color);
-  color: black;
-  -webkit-transition: 0.2s ease-in-out;
-  -moz-transition: 0.2s ease-in-out;
-  -ms-transition: 0.2s ease-in-out;
-  -o-transition: 0.2s ease-in-out;
+    background: transparent;
+    border: 2px solid var(--main-color);
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: bolder;
+    transition: 0.2s ease-in-out;
+    background-color: var(--main-color);
+    color: black;
+    -webkit-transition: 0.2s ease-in-out;
+    -moz-transition: 0.2s ease-in-out;
+    -ms-transition: 0.2s ease-in-out;
+    -o-transition: 0.2s ease-in-out;
 }
 .eventbutton:hover {
-  background-color: black;
-  color: var(--main-color);
+    background-color: black;
+    color: var(--main-color);
 }
 .prizes {
-  display: block;
+    display: block;
 }
 .eventprize {
-  color: var(--main-color);
+    color: var(--main-color);
 }
 .prize {
-  font-size: medium;
+    font-size: medium;
 }
 @media screen and (max-width: 767px) {
-  .events-page-heading {
-    /* padding-top: 40px; */
-    margin: 0px;
-    margin-top: 50px;
-    text-align: center;
-    /* display: none; */
-  }
+    .events-page-heading {
+        /* padding-top: 40px; */
+        margin: 0px;
+        margin-top: 50px;
+        text-align: center;
+        /* display: none; */
+    }
 }
 
 .eventdesc {
-  width: 70%;
-  margin: auto;
-  font-size: 1.2rem;
-  line-height: 1.5;
+    width: 70%;
+    margin: auto;
+    font-size: 1.2rem;
+    line-height: 1.5;
 }
 
 .prizes {
-  display: flex;
-  gap: 50px;
-  justify-content: center;
-  align-items: flex-start;
-  font-weight: bold;
+    display: flex;
+    gap: 50px;
+    justify-content: center;
+    align-items: flex-start;
+    font-weight: bold;
 }
 
 @media (max-width: 600px) {
-  .eventdesc {
-    width: 100%;
-  }
+    .eventdesc {
+        width: 100%;
+    }
 
-  .prizes {
-    flex-direction: column;
-    align-items: center;
-  }
+    .prizes {
+        flex-direction: column;
+        align-items: center;
+    }
 }

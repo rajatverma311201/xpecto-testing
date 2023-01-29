@@ -91,11 +91,11 @@
 }
 
 .sidebarBtn:hover {
-  transform: translateX(5px) !important;
-  -webkit-transform: translateX(5px) !important;
-  -moz-transform: translateX(5px) !important;
-  -ms-transform: translateX(5px) !important;
-  -o-transform: translateX(5px) !important;
+  transform: translateX(10px) !important;
+  -webkit-transform: translateX(10px) !important;
+  -moz-transform: translateX(10px) !important;
+  -ms-transform: translateX(10px) !important;
+  -o-transform: translateX(10px) !important;
 }
 .sidebarBtn a {
   display: flex;

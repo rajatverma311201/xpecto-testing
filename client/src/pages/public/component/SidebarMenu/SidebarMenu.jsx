@@ -126,6 +126,14 @@ function SidebarMenu() {
               ABOUT US
             </Link>
           </button>
+          <button
+            style={{ "--animation-order": 3 }}
+            className={styles.sidebarBtn}
+          >
+            <Link smooth to="/#contact" onClick={() => setSidebarOpen(false)}>
+              CONTACT US
+            </Link>
+          </button>
           {/* <button
             style={{ "--animation-order": 3 }}
             className={styles.sidebarBtn}
@@ -142,7 +150,7 @@ function SidebarMenu() {
           </button>
           {!loadingUser && isAuthenticated ? (
             <button
-              style={{ "--animation-order": 3 }}
+              style={{ "--animation-order": 5 }}
               className={styles.sidebarBtn}
             >
               <Link smooth to="/profile" onClick={() => setSidebarOpen(false)}>
@@ -176,6 +184,14 @@ function SidebarMenu() {
           >
             <Link to="/faq">FAQ</Link>
           </button> */}
+          <button
+            style={{ "--animation-order": 6 }}
+            className={styles.sidebarBtn}
+          >
+            <Link smooth to="/ourteam" onClick={() => setSidebarOpen(false)}>
+              MEET OUR TEAM
+            </Link>
+          </button>
         </div>
       </div>
     </>
