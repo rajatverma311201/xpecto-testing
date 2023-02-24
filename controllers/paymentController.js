@@ -1,5 +1,21 @@
 const Razorpay = require("razorpay");
 const crypto = require("crypto");
+const PaymentDetails = require("../models/paymentDetails");
+
+exports.getPaymentDetails = async (req, res) => {
+	try {
+		const paymentDetails = await PaymentDetails.find();
+		if(paymentDetails.length === 0) {
+			res.status(404).json({ message: "payment details not found" });
+		}
+		else {
+			res.status(200).json({ status:"success", data: paymentDetails[0] });
+		}
+	} catch (error) {
+		res.status(500).json({ message: "Internal Server Error!" });
+		console.log(error);
+	}
+};
 
  exports.paymentorders=async (req, res) => {
 	try {

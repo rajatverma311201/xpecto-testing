@@ -4,7 +4,7 @@ import styles from "./Layout.module.css";
 function LayoutPage({ children, dataColor }) {
   useEffect(() => {
     let color = dataColor;
-    if (!dataColor) color = "#faea09";
+    if (!dataColor) color = "#f8e856";
     document.body.style.setProperty("--current-page-color", color);
   }, [dataColor]);
 

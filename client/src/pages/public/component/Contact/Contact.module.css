@@ -5,6 +5,7 @@
 }
 .contact-container {
   box-sizing: border-box;
+  padding-top: 30px;
   padding-bottom: 200px;
 }
 .card-inner {
@@ -12,25 +13,25 @@
   padding: 20px;
   height: 300px;
   font-family: "Montserrat";
-  /*background-color: var(--main-contact-color);
-  */width: 450px;
+
+  width: 450px;
   border: 2px solid var(--main-contact-color);
-  /*border: 2px solid #fff;
-  */border-radius: 10px;
+
+  border-radius: 10px;
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
   -ms-border-radius: 10px;
   -o-border-radius: 10px;
 }
 .contact-heading {
+  text-shadow: #5eeeee 0 0 7.5px;
   font-size: 4rem;
   font-weight: 500;
   color: var(--main-contact-color);
-  /* text-align: start; */
   font-family: "Android 101";
 }
 .cards-container {
-    display: flex;
+  display: flex;
   gap: 100px;
   align-items: center;
   justify-content: center;
@@ -38,7 +39,7 @@
 }
 
 .card {
-  backdrop-filter: blur(50px)!important;
+  backdrop-filter: blur(50px) !important;
 }
 
 .card-heading {
@@ -71,8 +72,8 @@
 }
 
 .email {
-    margin: 10px;
-    margin-bottom: 15px;
+  margin: 10px;
+  margin-bottom: 15px;
 }
 .email-text,
 .phone-text {
@@ -86,15 +87,15 @@
     font-size: 2.49rem;
   }
   .email-text,
-.phone-text {
-  font-size: 16px;
-  margin: 5px;
-}
-.card-inner{
+  .phone-text {
+    font-size: 16px;
+    margin: 5px;
+  }
+  .card-inner {
     width: 301px;
     height: auto;
-}
-.card-heading{
+  }
+  .card-heading {
     font-size: 1.5rem;
-}
+  }
 }

@@ -1,5 +1,4 @@
 .navbar-container {
-  height: 100%;
   position: fixed;
   left: 0;
   z-index: 100;
@@ -52,6 +51,10 @@
 }
 .navbar-icons svg {
   color: black;
+   transition: transform ease-in-out 0.1s;
+}
+.navbar-icons:hover svg {
+  transform: scale(1.2);
 }
 .scrollbar-container {
   box-sizing: content-box;
@@ -80,4 +83,11 @@
   z-index: -1;
   border-bottom: 1px solid rgba(0, 0, 0, .5);
   /* box-shadow: 0 15px 25px 50px rgba(0, 0, 0, .25); */
+}
+
+/* max width 450px */
+@media only screen and (max-width: 450px) {
+  .navbar-container{
+    height: auto;
+  }
 }

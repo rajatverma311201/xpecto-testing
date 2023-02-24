@@ -1,0 +1,121 @@
+:root {
+  --main-faq-color: #00b4d8 !important;
+}
+
+.container * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: space-evenly; */
+  align-items: center;
+  /* max-width: 750px; */
+  padding-left: 0;
+  padding-right: 0;
+}
+.header {
+  display: flex;
+  flex-direction: column;
+}
+
+.main-heading {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  color: var(--main-faq-color);
+  text-align: left;
+  font-size: 4rem;
+  padding: 2.5rem;
+  margin-left: 3rem;
+  letter-spacing: 2.5px;
+  z-index: 50;
+  margin-top: 50px;
+  font-family: "Android 101";
+}
+
+@media (max-width: 600px) {
+  .main-heading {
+    font-size: 3rem;
+    padding: 2rem;
+    margin-left: 0px;
+    text-align: center;
+  }
+}
+
+.loading {
+  /* font-size: 2.5rem;
+    color: var(--main-faq-color);
+    font-weight: bold; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 50px auto;
+}
+
+.faq-container {
+  --faq-clip-size: 40px;
+  cursor: pointer;
+  user-select: none;
+  width: 75% !important;
+  color: white !important;
+  max-width: 750px;
+  padding: 30px 30px;
+  border: 3px solid var(--main-faq-color);
+  -webkit-clip-path: polygon(
+    0 0,
+    0 calc(100% - var(--faq-clip-size)),
+    var(--faq-clip-size) 100%,
+    100% 100%,
+    100% var(--faq-clip-size),
+    calc(100% - var(--faq-clip-size)) 0
+  );
+  clip-path: polygon(
+    0 0,
+    0 calc(100% - var(--faq-clip-size)),
+    var(--faq-clip-size) 100%,
+    100% 100%,
+    100% var(--faq-clip-size),
+    calc(100% - var(--faq-clip-size)) 0
+  );
+  backdrop-filter: blur(5px);
+  transition: all 0.5s !important;
+  background: transparent !important;
+}
+.faq-container:hover,
+.faq-open {
+  transform: translateY(-10px);
+  -webkit-clip-path: polygon(0 0, 0 100%, 0 100%, 100% 100%, 100% 0, 100% 0);
+  clip-path: polygon(0 0, 0 100%, 0 100%, 100% 100%, 100% 0, 100% 0);
+  -webkit-transform: translateY(-10px);
+  -moz-transform: translateY(-10px);
+  -ms-transform: translateY(-10px);
+  -o-transform: translateY(-10px);
+}
+
+.faq-question {
+  text-align: center;
+}
+.faq-answer {
+  padding: 20px 0;
+  font-size: 1.25rem;
+}
+
+@media (max-width: 600px) {
+  .main-heading {
+    font-size: 3rem;
+  }
+  .faq-question {
+    font-size: 1.5rem;
+  }
+}
+
+.coming-soon {
+  font-size: 2rem;
+  color: white;
+  text-align: center;
+  align-self: center !important;
+  justify-self: center !important;
+}

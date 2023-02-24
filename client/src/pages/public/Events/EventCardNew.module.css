@@ -1,87 +1,126 @@
 :root {
-    --main-color: #f8c456;
+  --event-card-main-color: #f8c456;
 }
 
 .card-outer-container * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 .card-outer-container {
-    padding: 5px;
-    background-color: var(--main-color);
-
-    /* width: 500px; */
-    margin: 0;
+  padding: 5px;
+  background-color: var(--event-card-main-color);
+  /*box-shadow: 0 0 50px -20px #f8e856;
+    */ /*width: 500px;
+    */
+  margin: 0;
+  transition: all 0.2s;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -ms-transition: all 0.2s;
+  -o-transition: all 0.2s;
+}
+.card-outer-container:hover {
+  transform: scale(1.025);
+  box-shadow: 0 0 50px -25px var(--event-card-main-color);
+  -webkit-transform: scale(1.025);
+  -moz-transform: scale(1.025);
+  -ms-transform: scale(1.025);
+  -o-transform: scale(1.025);
 }
 .card-inner-container {
-    position: relative;
-    margin: 0;
+  position: relative;
+  margin: 0;
 
-    background-color: #0d0e10;
-    /* width: 100%; */
-    /* height: 100%; */
-    color: var(--main-color);
+  background-color: #0d0e10;
+  /* width: 100%; */
+  /* height: 100%; */
+  color: var(--event-card-main-color);
 
-    /* outline: var(--main-color);
+  /* outline: var(--event-card-main-color);
   outline-width: 5px;
   outline-style: solid; */
-    border-top-right-radius: 10px;
-    border-bottom-left-radius: 10px;
-    text-align: left;
-    padding: 1rem;
-    padding-right: 2rem;
-    padding-bottom: 2rem;
+  border-top-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  text-align: left;
+  padding: 1rem;
+  padding-right: 2rem;
+  padding-bottom: 1rem;
+  /* height: 10px; */
 }
 .main-container {
-    position: relative;
+  position: relative;
 }
 .event-name {
-    font-size: 2.5rem;
-    margin-bottom: 10px;
+  font-size: 2.5rem;
+  margin-bottom: 10px;
 }
 .event-tagline {
-    font-size: 1rem;
-    font-weight: normal;
-    margin-bottom: 10px;
+  font-size: 1rem;
+  font-weight: normal;
 }
 .more-button {
-    position: absolute;
-    right: 10px;
-    bottom: 0rem;
-    clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
-    padding: 5px 20px 1px 20px;
-    background-color: #f8c456;
-    color: #0d0e10;
-    font-size: 12.5px;
-    text-decoration: none;
+  position: absolute;
+  right: 10px;
+  bottom: 0rem;
+  clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
+  padding: 5px 20px 1px 20px;
+  background-color: #f8c456;
+  color: #0d0e10;
+  font-size: 12.5px;
+  text-decoration: none;
+}
+.date {
+  padding: 2px 0px;
 }
 @media (max-width: 600px) {
-    .event-name {
-        font-size: 1.75rem;
-    }
-    .event-tagline {
-        font-size: 0.7rem;
-    }
+  .event-name {
+    font-size: 1.75rem;
+  }
+  .event-tagline {
+    font-size: 0.7rem;
+  }
 
-    .more-button {
-        font-size: 10px;
-    }
+  .more-button {
+    font-size: 10px;
+  }
+  .date {
+    font-size: 10px;
+  }
+  .card-inner-container {
+    /* height: 180px; */
+  }
+  .status {
+    font-size: 1.1rem !important;
+  }
 }
 
 .live {
-    color: aliceblue;
-    background-color: red;
-    padding: 5px 10px;
-    margin: 5px;
-    font-weight: bold;
-    /* font-family: "Android 101"; */
-    border-radius: 25px;
-    /*margin-top: 25px;
+  color: aliceblue;
+  box-shadow: 0 0 15px 0 red;
+  background-color: red;
+  padding: 5px 10px;
+  margin: 5px 0px;
+  font-weight: bold;
+  /* font-family: "Android 101"; */
+  border-radius: 25px;
+  /*margin-top: 25px;
   */ /*width: 50px;
   */
-    -webkit-border-radius: 25px;
-    -moz-border-radius: 25px;
-    -ms-border-radius: 25px;
-    -o-border-radius: 25px;
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  -ms-border-radius: 25px;
+  -o-border-radius: 25px;
+}
+
+.status {
+  color: #ccc;
+  font-weight: bold;
+  /* margin: 25px; */
+  margin-top: 2.5px;
+  margin-bottom: 12.5px;
+  /* padding-top: 5px; */
+  /* padding-bottom: 5px; */
+  font-family: "Android 101";
+  font-size: 1.2rem;
 }

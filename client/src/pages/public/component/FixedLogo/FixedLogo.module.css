@@ -1,0 +1,20 @@
+
+.fixed-logo {
+  display: none;
+  position: fixed;
+  top: 10px;
+  width: 170px;
+  z-index: 1000;
+  right: 25px;
+  top: 10px;
+
+  font-family: 'Android 101' !important;
+}
+@media (max-width: 600px) {
+  .fixed-logo {
+    width: 150px;
+  }
+}
+.fixed-logo-visible {
+  display: unset;
+}

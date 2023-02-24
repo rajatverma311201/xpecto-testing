@@ -1,5 +1,7 @@
 import React from "react";
 import styles from "./Home.module.css";
+
+import CountdownTimer from "./CountdownTimer";
 import { Link } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
 import { Button } from "@mui/material";
@@ -8,10 +10,10 @@ import axios from "axios";
 // import Razorpay from "../component/payment/Razorpay";
 import { useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
-import Sidebar from "../../../components/Sidebar/Sidebar";
 import { useDispatch } from "react-redux";
 import * as action from "../../../actions/index";
 import About from "../component/About/About";
+import Ambassador from "../component/Ambassador/Ambassador";
 import { useRef } from "react";
 import { ReactComponent as FixedLogo } from "../../../svg/xpecto-logo.svg";
 import { ReactComponent as BackToTop } from "../../../svg/backtop-btn.svg";
@@ -19,21 +21,20 @@ import LinkedIn from "@mui/icons-material/LinkedIn";
 import Instagram from "@mui/icons-material/Instagram";
 import Twitter from "@mui/icons-material/Twitter";
 import { GoogleLogin } from "@react-oauth/google";
-import Modal from "@mui/material/Modal";
+import { Modal, Box } from "@mui/material";
 import LayoutPage from "../component/Layout/Layout";
 import Contact from "../component/Contact/Contact";
 import { motion } from "framer-motion";
 export default function Home() {
-  const user = useSelector((state) => state.userinfo);
-  const dispatch = useDispatch();
-  const [newuser, setnewuser] = useState(user);
   const navigate = useNavigate();
-  const [isuser, setisuser] = useState(false);
-  const [bool, setbool] = useState(false);
+
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
-  
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   const loginSuccessHandler = async (cred) => {
     try {
       const resp = await axios.post(
@@ -54,23 +55,18 @@ export default function Home() {
   };
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [loadingUser, setLoadingUser] = useState(true);
-  const [userdetails, setuserdetails] = useState({ data: {} });
-  const [imageurl, setimageurl] = useState();
+
   const getprofiledata = async () => {
     try {
       const url = `${process.env.REACT_APP_BACKENDURL}/api/user`;
       const data = await axios.get(url);
       setLoadingUser(false);
       const usrDATA = data.data.user;
-      setuserdetails((userdetails) => ({
-        ...userdetails,
-        ...usrDATA,
-      }));
-      setimageurl(usrDATA.image);
       if (usrDATA.email) {
         setIsAuthenticated((prev) => true);
       }
     } catch (err) {
+      setLoadingUser(false);
       setIsAuthenticated((prev) => false);
       console.log(err);
     }
@@ -78,12 +74,6 @@ export default function Home() {
   useEffect(() => {
     getprofiledata();
   }, []);
-  const googleAuth = async () => {
-    window.open(
-      `${process.env.REACT_APP_BACKENDURL}/auth/google/callback`,
-      "_self"
-    );
-  };
 
   const [fixedLogoVisible, setFixedLogoVisible] = useState(false);
   useEffect(() => {
@@ -125,7 +115,10 @@ export default function Home() {
       window.removeEventListener("scroll", scrollEvent, { passive: true });
     };
   }, [mainLogoRef]);
+
   // console.log("usedetail " ,user)
+
+  const XPECTO_TIME = new Date("March 3, 2023").getTime();
   return (
     <>
       <LayoutPage>
@@ -150,13 +143,12 @@ export default function Home() {
             fixedLogoVisible && styles["back-to-top-visible"]
           }`}
         >
-          
-            <BackToTop />
+          <BackToTop />
         </HashLink>
-        <Sidebar />
+        {/* <Sidebar /> */}
         <div
           ref={mainLogoRef}
-          data-color="#faea09"
+          data-color="#f8e856"
           className={styles["section1"]}
           id="#"
 
@@ -168,19 +160,19 @@ export default function Home() {
           //   duration: 1,
           // }}
         >
-          <img
+          {/* <img
             className={styles["section1-plus"]}
             src={`${process.env.PUBLIC_URL}/home/plusplus.svg`}
             alt="plusplusgraphic"
-          />
+          /> */}
           <motion.div
-            initial={{ opacity: 0, scale: 0.5, }}
+            initial={{ opacity: 0, scale: 0.5 }}
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{
               type: "spring",
               bounce: 0.4,
               duration: 1,
-              delay:1,
+              delay: 1,
             }}
             className={styles["mainlogo"]}
           >
@@ -188,6 +180,8 @@ export default function Home() {
               src={`${process.env.PUBLIC_URL}/home/mainlogo.svg`}
               alt="XpectoLogo"
             />
+
+            <CountdownTimer targetDate={XPECTO_TIME} />
             {/* temporary solution start */}
             <div className={styles["social-icons"]}>
               <a
@@ -215,7 +209,7 @@ export default function Home() {
             {/* temporary solution end */}
           </motion.div>
 
-          <motion.img
+          {/* <motion.img
             className={styles["section1-rightrectangle"]}
             src={`${process.env.PUBLIC_URL}/home/rightrectangle.svg`}
             alt="rightrectangle"
@@ -226,7 +220,7 @@ export default function Home() {
               bounce: 0.4,
               duration: 1.5,
             }}
-          />
+          /> */}
           <HashLink
             smooth
             to="/#about"
@@ -250,19 +244,18 @@ export default function Home() {
             alt="bottomleftgraphic"
           />
           {!loadingUser && !isAuthenticated ? (
-            <img
+            <button
               className={styles["section1-register"]}
-              src={`${process.env.PUBLIC_URL}/home/register.svg`}
-              alt="register"
               onClick={handleOpen}
-            />
+            >
+              SIGN IN
+            </button>
           ) : (
             ""
           )}
-        
         </div>
         <motion.div
-          initial={{ y: 150 }}
+          initial={{ y: 0 }}
           whileInView={{ y: 0 }}
           transition={{
             // type: "spring",
@@ -273,6 +266,19 @@ export default function Home() {
           id="about"
         >
           <About />
+        </motion.div>
+        <motion.div
+          initial={{ y: 0 }}
+          whileInView={{ y: 0 }}
+          transition={{
+            // type: "spring",
+            // bounce: 0.4,
+            duration: 1,
+          }}
+          className={styles["section1"]}
+          id="about"
+        >
+          <Ambassador />
         </motion.div>
         <div className={styles["section2"]} id="contact">
           <Contact />
@@ -302,13 +308,24 @@ export default function Home() {
         <Razorpay />
       </div> */}
       <Modal
+        sx={{ backdropFilter: "blur(25px)" }}
         open={open}
         onClose={handleClose}
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
       >
-        <div>
+        <Box
+          sx={{
+            position: "absolute",
+            top: "50%",
+            left: "50%",
+            transform: "translate(-50%, -50%)",
+          }}
+        >
           <GoogleLogin
+            size="large"
+            width="300"
+            useOneTap
             onSuccess={(credentialResponse) => {
               loginSuccessHandler(credentialResponse.credential);
             }}
@@ -316,7 +333,7 @@ export default function Home() {
               console.log("Login Failed");
             }}
           />
-        </div>
+        </Box>
       </Modal>
     </>
   );

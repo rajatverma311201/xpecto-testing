@@ -30,10 +30,7 @@ const Contact = () => {
       window.removeEventListener("scroll", scrollEvent, { passive: true });
     };
   }, [contactRef]);
-  const squareVariants = {
-    visible: { opacity: 1, transition: { duration: 1 }, y: 0 },
-    hidden: { opacity: 0, y: 100 },
-  };
+
   return (
     <motion.section
       id="contact"
@@ -43,8 +40,8 @@ const Contact = () => {
       //   data-color="#ed7014"
       //   data-color="#00b4d8"
       data-color="#00ddcc"
-      initial={{ y: 150 }}
-      whileInView={{ y: 0 }}
+      initial={{ y: 100 }}
+      whileInView={{ y: -100 }}
       transition={{
         // type: "spring",
         // bounce: 0.4,

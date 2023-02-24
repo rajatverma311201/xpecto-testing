@@ -1,183 +1,319 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat");
 
 :root {
-    --main-color: #f8e856;
+  --profile-main-color: #f945f1;
+  --profile-main-color: #ff3375;
+  --profile-main-color: #ff9efa;
+  --profile-main-color: #5dd9ff;
 }
 
-.fixed-logo {
-    display: none;
-    position: fixed;
-    top: 2%;
-    height: 170px;
-    aspect-ratio: 1 / 1;
-    z-index: 1000;
-    right: 25px;
-    top: 10px;
-
-    font-family: "Android 101" !important;
-}
-@media (max-width: 600px) {
-    .fixed-logo {
-        height: 150px;
-    }
-}
-.fixed-logo-visible {
-    display: unset;
-}
-
-.pback {
-    background-image: url("./background.jpg");
-    height: 100vh;
-    width: 100vw;
-
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-h3 {
-    margin: 10px 0;
+.join-team-button {
+  position: absolute;
+  top: 75px;
+  left: 100px;
+  color: black;
+  background-color: var(--profile-main-color);
+  border: 2px solid var(--profile-main-color);
+  padding: 10px 15px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  font-family: "Android 101";
+  transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  font-weight: normal;
+  box-shadow: 0 0 25px -5px var(--profile-main-color);
 }
 
-h6 {
-    margin: 5px 0;
-    /* text-transform: uppercase; */
-}
 
-p {
-    font-size: 14px;
-    line-height: 21px;
-}
+.logout-button{
+  width:50%;
+  color: black;
+  background-color: var(--profile-main-color);
+  border: 2px solid var(--profile-main-color);
+  padding: 5px 10px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  font-family: "Android 101";
+  transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  font-weight: normal;
+  box-shadow: 0 0 25px -5px var(--profile-main-color);
+ /* align-items: center; */
+ display: block;
+ margin-left: auto;
+ margin-right: auto;
 
-.containers {
-    position: absolute;
-    width: 300px;
-    height: 200px;
-    z-index: 15;
-    top: 50%;
-    left: 50%;
-    margin: -100px 0 0 -150px;
 }
-
-.card-container {
-    background-color: #231e39;
-    border-radius: 5px;
-    box-shadow: 0px 10px 20px -10px rgba(0, 0, 0, 0.75);
-    color: #b3b8cd;
-    padding-top: 30px;
-    position: relative;
-    width: 350px;
-    max-width: 100%;
-    text-align: center;
-    align-items: center;
-    padding-bottom: 30px;
-    padding-left: 5px;
-    padding-right: 5px;
+.logoutdiv{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
-
-.card-container .pro {
-    color: #231e39;
-    background-color: #febb0b;
-    border-radius: 3px;
-    font-size: 14px;
-    font-weight: bold;
-    padding: 3px 7px;
-    position: absolute;
-    top: 30px;
-    left: 30px;
+.logout-button:hover,
+.join-team-button:hover {
+  background-color: black;
+  color: var(--profile-main-color);
+  cursor: pointer;
 }
+.join-team-button {
+  box-shadow: 0 0 25px -7.5px var(--profile-main-color);
 
-.card-container .round {
-    border: 1px solid #03bfcb;
-    border-radius: 50%;
-    padding: 7px;
-}
-
-button.primary {
-    background-color: #03bfcb;
-    border: 1px solid #03bfcb;
-    border-radius: 3px;
-    color: #231e39;
-    font-family: Montserrat, sans-serif;
-    font-weight: 500;
-    padding: 10px 25px;
-}
-
-button.primary.ghost {
-    background-color: transparent;
-    color: #02899c;
-}
-
-.skills {
-    background-color: #1f1a36;
-    text-align: left;
-    padding: 15px;
-    margin-top: 30px;
-}
-
-.skills ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
-
-.skills ul li {
-    border: 1px solid #2d2747;
-    border-radius: 2px;
-    display: inline-block;
-    font-size: 12px;
-    margin: 0 7px 7px 0;
-    padding: 7px;
-}
-
-footer {
-    background-color: #222;
-    color: #fff;
-    font-size: 14px;
-    bottom: 0;
-    position: fixed;
-    left: 0;
-    right: 0;
-    text-align: center;
-    z-index: 999;
-}
-
-footer p {
-    margin: 10px 0;
-}
-
-footer i {
-    color: red;
-}
-
-footer a {
-    color: #3c97bf;
-    text-decoration: none;
-}
-
-.logout-button {
-    position: absolute;
-    top: 50px;
-    left: 100px;
-    color: black;
-    background-color: #f8e856;
-    padding: 10px 15px;
-    border-radius: 10000px;
-    -webkit-border-radius: 10000px;
-    -moz-border-radius: 10000px;
-    -ms-border-radius: 10000px;
-    -o-border-radius: 10000px;
-}
-
-.logout-button:hover {
-    cursor: pointer;
+  margin-top: 10px;
+  font-size: 1.5rem;
+  position: unset;
 }
 
 .loading {
   height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0;
-    padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
 
+.profile-main-container {
+  margin-top: 100px;
+  border: 2px solid white;
+  border-radius: 5px;
+  backdrop-filter: blur(25px);
+  width: 350px;
+  padding: 25px 20px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  padding-bottom: 40px;
+}
+
+.page-container {
+  padding: 100px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: flex-start;
+}
+
+@media (max-width: 600px) {
+  .profile-main-container {
+    padding: 25px 5px;
+    margin-top: 40px;
+  }
+  .page-container {
+    padding: 100px 5px;
+  }
+
+}
+.teams-container > div {
+  width: 325px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.teams-heading {
+  font-weight: normal;
+  font-size: 2rem;
+  font-family: "Android 101";
+  color: var(--profile-main-color);
+  text-shadow: 0 0 10px var(--profile-main-color);
+}
+
+.teams-inner-container {
+  /* border: 1.5px solid white; */
+  /* border-radius: 10px; */
+  width: 100%;
+  height: 100%;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+.created-team-card,
+.joined-team-card {
+  box-sizing: border-box;
+  color: white;
+  padding: 10px;
+  backdrop-filter: blur(25px);
+  -webkit-backdrop-filter: blur(25px);
+  border-radius: 10px;
+  margin: 10px auto;
+  width: 95%;
+  border: 2px solid white;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+.joined-team-card>div:nth-child(1),
+.created-team-card > div:nth-child(1) {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.joined-team-card>div:nth-child(2),
+.created-team-card > div:nth-child(2) {
+  font-size: 1.25rem;
+  /* font-weight: bold; */
+}
+.joined-team-card,
+.created-team-card > div {
+  margin: 5px auto;
+}
+
+.created-team-card a {
+  padding: 0;
+  cursor: pointer;
+}
+.created-team-card a > button {
+  cursor: pointer;
+  text-transform: uppercase;
+  /*font-weight: bold;
+  */
+  font-size: 1rem;
+  padding: 5px 15px 5px 15px;
+  width: 100px;
+  color: black;
+  background-color: var(--profile-main-color);
+  border: 2px solid var(--profile-main-color);
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  transition: all 0.25s;
+  -webkit-transition: all 0.25s;
+  -moz-transition: all 0.25s;
+  -ms-transition: all 0.25s;
+  -o-transition: all 0.25s;
+}
+.created-team-card a > button:hover {
+  color: var(--profile-main-color);
+  background-color: black;
+}
+
+.name-container .name {
+  font-size: 2rem;
+  color: white;
+  font-family: "Montserrat";
+  font-weight: normal;
+}
+
+.image-container {
+  width: 100px;
+  height: 100px;
+  border: 1.5px solid white;
+  border-radius: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image {
+  /* outline-style: solid;
+  outline-offset: 2px;
+  outline-color: white; */
+  margin: auto;
+  height: 95%;
+  width: 95%;
+  clip-path: circle();
+}
+
+.phone-container .phone {
+  font-size: 1.25rem;
+  color: white;
+}
+
+.email-container .email {
+  font-size: 1.25rem;
+  color: white;
+  margin: 10px auto;
+  word-wrap: break-word;
+}
+.college-container .college {
+  font-size: 1.25rem;
+  color: white;
+  margin: 10px auto;
+  margin-bottom: 30px;
+}
+
+.join-team-modal {
+  border: 2px solid white;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  backdrop-filter: blur(50px);
+  height: 500px;
+  min-width: 400px;
+  text-align: center;
+  padding: 25px;
+  box-sizing: border-box;
+}
+
+@media (max-width: 480px) {
+  .join-team-modal {
+    min-width: 300px;
+  }
+}
+.join-team-modal h2 {
+  text-align: center;
+  color: white;
+  font-weight: normal;
+  font-family: "Android 101";
+  font-size: 2.5rem;
+}
+
+.join-team-modal h3,
+.join-team-modal label {
+  font-size: 1.5rem;
+  margin-bottom: 25px;
+  color: white;
+}
+
+.join-team-modal input {
+  margin: 25px;
+  width: 250px;
+  font-size: 20px;
+  outline: none;
+  padding: 5px;
+}
+.join-team-modal input[type="submit"] {
+  cursor: pointer;
+}
+
+.error-message {
+  color: rgb(255, 16, 16);
+  font-weight: bold;
+
+  font-size: 1.25rem;
+}
+
+
+.not-done {
+  color: white;
+  font-size: 1.25rem;
+  margin-top: -25px;
 }

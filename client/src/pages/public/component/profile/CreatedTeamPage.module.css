@@ -1,0 +1,91 @@
+.team-main-container {
+  margin-top: 5px;
+  color: white;
+  min-width: 300px;
+  max-width: 700px;
+  border: 2px solid white;
+  border-radius: 10px;
+  padding: 25px 25px;
+  backdrop-filter: blur(25px);
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+.team-main-container > * {
+  color: white;
+  margin-bottom: 10px;
+}
+.team-name {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.team-event-name {
+  font-size: 2rem;
+}
+.team-members-container {
+  margin: 25px auto;
+  padding: 50px auto !important;
+  /* border-bottom: 1px solid white; */
+  /* border-top: 1px solid white; */
+}
+.members-heading {
+  font-weight: bold;
+  font-size: 1.25rem;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+}
+
+.member-details {
+  margin-bottom: 10px;
+}
+.line {
+  width: 50px;
+  height: 2px;
+  border-radius: 10000px;
+  background-color: #5dd9ff;
+
+  -webkit-border-radius: 10000px;
+  -moz-border-radius: 10000px;
+  -ms-border-radius: 10000px;
+  -o-border-radius: 10000px;
+  margin: 10px auto;
+}
+
+.team-delete {
+  border: 2px solid #5dd9ff;
+  font-size: 1.25rem;
+  font-family: "Android 101";
+  box-shadow: 0 0 25px -5px #5dd9ff;
+  background-color: #5dd9ff;
+  color: black;
+  width: 200px;
+  padding: 10px 15px;
+  border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+  transition: all 0.25s;
+  -webkit-transition: all 0.25s;
+  -moz-transition: all 0.25s;
+  -ms-transition: all 0.25s;
+  -o-transition: all 0.25s;
+}
+
+.team-delete:hover {
+  cursor: pointer;
+  color: #5dd9ff;
+  background-color: black;
+}
+
+.profile-btn {
+  position: absolute;
+}
+
+.logoutdiv {
+  width: 300px;
+  display: flex;
+  padding-top: 5rem;
+}

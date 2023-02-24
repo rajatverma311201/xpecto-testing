@@ -1,0 +1,129 @@
+:root {
+    --ambassador-main-color: #C078F7;
+}
+
+.heading1 {
+
+    text-shadow: var(--ambassador-main-color) 0 0 7.5px;
+
+    text-align: start;
+    font-size: 3.5rem;
+    font-weight: 500;
+    /* margin-bottom: 10px; */
+    /* text-shadow: 1px 1.1px 2.5px #fff; */
+    color: var(--ambassador-main-color);
+    margin-bottom: 0px;
+    font-family: "Android 101";
+}
+
+.aboutcontainer {
+    text-align: start;
+    padding-left: 10%;
+    padding-right: 10%;
+    width: 50%;
+    color: #fff;
+    font-weight: 400;
+    font-size: 1.25rem;
+    padding-top: 30px;
+    padding-bottom: 50px;
+    word-spacing: 5px;
+}
+
+.aboutcontent {
+    line-height: 1.25;
+    font-size: 1.25rem;
+    text-align: justify;
+    margin-bottom: 50px;
+}
+
+@media screen and (max-width: 600px) {
+    .heading1 {
+        font-size: 2.25rem;
+    }
+}
+
+.just {
+    /*border:3px solid  var(--ambassador-main-color);
+      */
+    background-color: var(--ambassador-main-color);
+    color: #000;
+    padding: 10px 15px;
+    border-radius: 10px;
+    border: 3px solid var(--ambassador-main-color);
+    cursor: pointer;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    transition: all 0.25s;
+    -webkit-transition: all 0.25s;
+    -moz-transition: all 0.25s;
+    -ms-transition: all 0.25s;
+    -o-transition: all 0.25s;
+    font-size: 1.35rem;
+    text-decoration: none;
+    font-family: "Android 101";
+    /* letter-spacing: -1px; */
+    box-shadow: 0 0 25px 0px var(--ambassador-main-color);
+    }
+
+.just:hover {
+    background-color: #000;
+    color: var(--ambassador-main-color);
+    transform: translateY(-10px);
+    /*background-color:  var(--ambassador-main-color);
+    */
+    /*color:  #FAEA09;
+    */
+    /*font-weight: bolder;
+    */
+    /*padding: 10px;
+    */
+    -webkit-transform: translateY(-10px);
+    -moz-transform: translateY(-10px);
+    -ms-transform: translateY(-10px);
+    -o-transform: translateY(-10px);
+}
+
+.just:active {
+    transform: translateY(5px);
+    -webkit-transform: translateY(5px);
+    -moz-transform: translateY(5px);
+    -ms-transform: translateY(5px);
+    -o-transform: translateY(5px);
+}
+
+@media screen and (max-width: 767px) {
+    .aboutcontainer {
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .graphic1,
+    .graphic2 {
+        display: none;
+    }
+
+    .aboutcontent {
+        font-size: 1.25rem;
+    }
+}
+
+.graphic1,
+.graphic2 {
+    position: absolute;
+    height: 50%;
+    right: 0;
+    transform: scale(-1, 1);
+}
+
+.graphic1 {
+    margin: 5%;
+}
+
+.graphic2 {
+    margin: 15%;
+}

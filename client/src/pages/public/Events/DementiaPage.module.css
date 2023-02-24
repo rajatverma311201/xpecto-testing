@@ -1,0 +1,298 @@
+:root {
+  --main-color: #5dffde;
+}
+
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 200px;
+}
+
+.events-page-heading {
+  margin: 75px;
+  padding: 0;
+  color: var(--main-color);
+  text-align: left;
+  font-size: 3rem;
+  /* padding: 2.5rem; */
+  /* margin-left: 3rem; */
+  /* letter-spacing: 5px; */
+  font-weight: bold;
+  font-family: "Android 101";
+  text-shadow: 0 0 5px var(--main-color);
+}
+.events-page-teamsize {
+  font-size: 1.75rem;
+  font-weight: normal;
+  color: var(--main-color);
+  margin: 10px -5px;
+}
+
+@media (max-width: 600px) {
+  .events-page-heading {
+    font-size: 2rem;
+    padding: 2rem;
+    margin-left: 1.5rem;
+  }
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 200px;
+}
+.main {
+  color: white;
+  /* padding: 5rem; */
+  padding-top: 0rem;
+  gap: 25px;
+}
+.event-btns {
+  display: block;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  display: flex;
+  gap: 25px;
+  /* background-color: var(--main-color); */
+  /* color: black; */
+}
+.eventbutton,
+.create-team-register {
+  background: transparent;
+  border: 2px solid var(--main-color);
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: bolder;
+  transition: 0.2s ease-in-out;
+  background-color: var(--main-color);
+  color: black;
+  -webkit-transition: 0.2s ease-in-out;
+  -moz-transition: 0.2s ease-in-out;
+  -ms-transition: 0.2s ease-in-out;
+  -o-transition: 0.2s ease-in-out;
+  font-family: "Android 101";
+
+  box-shadow: 0 0 30px -10px var(--main-color);
+}
+.eventbutton:hover,
+.create-team-register:hover {
+  background-color: black;
+  color: var(--main-color);
+  transform: translateY(-5px);
+  -webkit-transform: translateY(-5px);
+  -moz-transform: translateY(-5px);
+  -ms-transform: translateY(-5px);
+  -o-transform: translateY(-5px);
+}
+
+.eventbutton:active,
+.create-team-register:active {
+  transform: translateY(0px);
+  -webkit-transform: translateY(0px);
+  -moz-transform: translateY(0px);
+  -ms-transform: translateY(0px);
+  -o-transform: translateY(0px);
+}
+
+.create-team-register {
+  width: auto;
+  margin: 10px;
+}
+.prizes {
+  display: block;
+}
+.eventprize {
+  font-size: 1.75rem;
+  font-family: "Android 101";
+  font-weight: normal;
+  color: var(--main-color);
+}
+.prize {
+  /*border: 2px solid white;
+    */
+  backdrop-filter: blur(25px);
+  padding: 25px;
+  border-radius: 10px;
+  font-size: medium;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  box-shadow: 0 0 25px -7.5px var(--main-color);
+  background-color: var(--main-color);
+  color: var(--main-color);
+  color: black;
+  line-height: 25px;
+  transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  -o-transition: all 0.3s;
+}
+.prize:hover {
+  transform: translateY(-5px);
+  -webkit-transform: translateY(-5px);
+  -moz-transform: translateY(-5px);
+  -ms-transform: translateY(-5px);
+  -o-transform: translateY(-5px);
+}
+@media screen and (max-width: 767px) {
+  .events-page-heading {
+    /* padding-top: 40px; */
+    margin: 0px;
+    margin-top: 50px;
+    text-align: center;
+    /* display: none; */
+  }
+}
+
+.eventdesc {
+  width: 70%;
+  margin: auto;
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
+
+.prizes {
+  display: flex;
+  gap: 50px;
+  justify-content: center;
+  align-items: flex-start;
+  font-weight: bold;
+}
+
+@media (max-width: 600px) {
+  .eventdesc {
+    width: 100%;
+  }
+
+  .prizes {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.create-team-modal {
+  border: 2px solid white;
+  border: radius 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  backdrop-filter: blur(50px);
+  height: 500px;
+  min-width: 400px;
+  text-align: center;
+  padding: 25px;
+  box-sizing: border-box;
+}
+
+@media (max-width: 480px) {
+  .create-team-modal {
+    min-width: 300px;
+  }
+}
+.create-team-modal h2 {
+  text-align: center;
+  font-weight: bold;
+  color: white;
+  font-weight: bold;
+  font-family: "Android 101";
+  font-size: 3rem;
+}
+
+.create-team-modal h3,
+.create-team-modal label {
+  margin-bottom: 25px;
+  color: white;
+}
+
+.create-team-modal input {
+  margin: 25px;
+  width: 250px;
+  font-size: 20px;
+  outline: none;
+  padding: 5px;
+}
+.create-team-modal input[type="submit"] {
+  cursor: pointer;
+}
+.name-taken-message {
+  color: red;
+}
+
+.code-message {
+  color: white;
+}
+
+.code {
+  color: white;
+}
+
+.event-main-description {
+  border: 1.5px solid white;
+  border-radius: 5px;
+  padding: 25px 25px;
+  max-width: 700px;
+  backdrop-filter: blur(25px);
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+
+.prizes-container {
+  /* margin: -20px; */
+  width: 350px;
+}
+
+.container-flex {
+  padding: 0 50px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 50px;
+  align-items: flex-start;
+}
+
+@media (max-width: 600px) {
+  .container-flex {
+    padding: 5px;
+  }
+
+  .event-main-description {
+    padding: 25px 10px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .header {
+    padding-bottom: 100px;
+  }
+}
+.prizes {
+  font-family: "Android 101";
+  display: flex;
+  /* flex-direction: column; */
+  flex-wrap: wrap;
+  gap: 25px;
+  margin: 0;
+}
+
+.sign-in-message {
+  font-size: 1.7rem;
+  font-weight: normal;
+}
+
+.event-shortsummary {
+  color: red;
+}

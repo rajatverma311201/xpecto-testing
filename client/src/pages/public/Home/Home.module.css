@@ -16,30 +16,36 @@ body {
 }
 
 .mainlogo {
+  padding-top: 100px;
   justify-content: center;
   align-self: center;
   width: 60%;
-  margin-bottom: 10vh;
+  margin-bottom: 9vh;
   margin-left: auto;
   margin-right: auto;
   overflow-x: clip;
+  transform: translateY(100px);
+  -webkit-transform: translateY(100px);
+  -moz-transform: translateY(100px);
+  -ms-transform: translateY(100px);
+  -o-transform: translateY(100px);
 }
-@media(max-width:700px){
-  .mainlogo{
-    width: 75%;
-    transform: translateY(-25px);
-    -webkit-transform: translateY(-25px);
-    -moz-transform: translateY(-25px);
-    -ms-transform: translateY(-25px);
-    -o-transform: translateY(-25px);
+@media (max-width: 700px) {
+  .mainlogo {
+    width: 60%;
+    transform: translateY(10px);
+    -webkit-transform: translateY(10px);
+    -moz-transform: translateY(10px);
+    -ms-transform: translateY(10px);
+    -o-transform: translateY(10px);
 }
-  .social-icons{
-    transform: scale(1.5) translateY(25px);
-    -webkit-transform: scale(1.5) translateY(25px);
-    -moz-transform: scale(1.5) translateY(25px);
-    -ms-transform: scale(1.5) translateY(25px);
-    -o-transform: scale(1.5) translateY(25px);
-}
+  .social-icons {
+    transform: scale(1.25) translateY(25px);
+    -webkit-transform: scale(1.25) translateY(25px);
+    -moz-transform: scale(1.25) translateY(25px);
+    -ms-transform: scale(1.25) translateY(25px);
+    -o-transform: scale(1.25) translateY(25px);
+  }
 }
 .social-icons {
   display: none;
@@ -52,11 +58,16 @@ body {
   height: 100%;
   margin: 0 10px;
   cursor: pointer;
+  transform: translateY(-25px);
+  -webkit-transform: translateY(-25px);
+  -moz-transform: translateY(-25px);
+  -ms-transform: translateY(-25px);
+  -o-transform: translateY(-25px);
 }
 .home-icons svg {
   color: white;
-  height: 100%;
-  width: 100%;
+  height: 90%;
+  width: 90%;
 }
 .section1-plus {
   position: absolute;
@@ -90,24 +101,58 @@ body {
 }
 
 .section1-register {
+  z-index: 1000000;
   position: absolute;
-  right: 6vw;
-  bottom: max(10vh, 50px);
-  width: max(15vw, 200px);
-  
+  font-size: 1.5rem;
+  right: 3%;
+  /* top: max(10vh, 150px); */
+  top: 10%;
+  width: 150px;
+  /* width: max(15vw, 200px); */
+  color: black;
+  background-color: #f8e856;
+  border: 2px solid #f8e856;
+  padding: 10px 15px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  font-family: "Android 101";
+  transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  font-weight: normal;
+  box-shadow: 0 0 25px #ffbb3c;
+  z-index: 111!important;
 }
-@media(max-width:700px)
-{
-  .section1-register{
-    transform: translate(-25px, -25px) scale(1.1);
-    -webkit-transform: translate(-25px, -25px) scale(1.1);
-    -moz-transform: translate(-25px, -25px) scale(1.1);
-    -ms-transform: translate(-25px, -25px) scale(1.1);
-    -o-transform: translate(-25px, -25px) scale(1.1);
-}
-}
-.section1-register:hover{
+.section1-register:hover {
+  background-color: black;
+  color: #f8e856;
   cursor: pointer;
+  transform: translateY(-7.5px);
+  -webkit-transform: translateY(-7.5px);
+  -moz-transform: translateY(-7.5px);
+  -ms-transform: translateY(-7.5px);
+  -o-transform: translateY(-7.5px);
+}
+
+.section1-register:active {
+  transform: translateY(-2.5px);
+  -webkit-transform: translateY(-2.5px);
+  -moz-transform: translateY(-2.5px);
+  -ms-transform: translateY(-2.5px);
+  -o-transform: translateY(-2.5px);
+}
+@media (max-width: 800px) {
+  .section1-register {
+    font-size: 1.3rem;
+    /* right: 10vw;
+    top: 100px; */
+    top:5%;
+  }
 }
 
 .fixed-logo {
@@ -120,8 +165,9 @@ body {
   right: 25px;
   top: 10px;
 
-  font-family: 'Android 101' !important;
-}@media (max-width: 600px) {
+  font-family: "Android 101" !important;
+}
+@media (max-width: 600px) {
   .fixed-logo {
     height: 150px;
   }
@@ -141,12 +187,19 @@ body {
   z-index: 10;
   cursor: pointer;
 }
+.back-to-top:hover{
+  transform: scale(1.05);
+}
+.back-to-top:active{
+  transform: scale(0.95);
+}
 .back-to-top-visible {
   display: unset;
 }
 @media screen and (max-width: 450px) {
   .social-icons {
     display: flex;
+    /* width: 25px; */
   }
   .page {
     padding-left: 0;

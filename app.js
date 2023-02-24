@@ -11,9 +11,11 @@ const workshopRouter = require("./routes/workshopRoutes");
 
 const paymentRouter = require("./routes/paymentRouters");
 const userRouter = require("./routes/userRoute");
+const eventTeamRouter = require("./routes/teamRoutes");
+const globalErrorController = require("./controllers/globalErrorController");
 // INITIALIZING EXPRESS APP
 const app = express();
-const path = require('path');
+const path = require("path");
 
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
@@ -39,10 +41,7 @@ if (process.env.NODE_ENV === "development") {
 
 // DEFINING ALL ROUTES
 
-
-app.use(express.static(path.join(__dirname, 'client/build')));
-
-
+app.use(express.static(path.join(__dirname, "client/build")));
 
 app.use("/api/payment/", paymentRouter);
 app.use("/api/events", eventRouter);
@@ -53,9 +52,10 @@ app.use("/api/teamMembers", teamMemberRouter);
 app.use("/api/webinars", webinarRouter);
 app.use("/api/workshops", workshopRouter);
 app.use("/api/user", userRouter);
+app.use("/api/eventTeam", eventTeamRouter);
 
-app.get('/*', function (req, res) {
-  res.sendFile(path.join(__dirname, 'client/build', 'index.html'));
+app.get("/*", function (req, res) {
+  res.sendFile(path.join(__dirname, "client/build", "index.html"));
 });
 
 // IF A ROUTE NOT AVAILABLE
@@ -65,5 +65,8 @@ app.all("*", async (req, res) => {
     message: "Route doesn't exist",
   });
 });
+
+// global error handler
+app.use(globalErrorController);
 
 module.exports = app;
